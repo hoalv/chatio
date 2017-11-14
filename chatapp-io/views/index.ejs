@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chatio</title>
+
+	<meta charset="UTF-8">
+	<title>Hero story and info</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" media="screen" href="/css/bootstrap.min.css" >
+	<script src="/js/jquery-3.1.1.min.js"></script>
+	<script src="/js/bootstrap.min.js" ></script>
+	<script src="socket.io/socket.io.js"></script>
+	<link rel="stylesheet" media="screen" href="/css/index.css"  >
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+		<div id="name-wrapper" >
+			<div id="login">
+				<h2>CHAT-IO</h2>
+				<form class="form-horizontal" role="form" id="formlogin">
+					  <div class="form-group">
+					    <label for="name" class="col-md-3 col-xs-3 col-sm-2 control-label">Your name:</label>
+					    <div class="col-md-7 col-xs-4 col-sm-9">
+					      <input  class="form-control" id="name" placeholder="Your name">
+					    </div>
+					  </div>
+					  
+					  <div class="form-group">
+					    <div class="col-sm-offset-3 col-sm-5 col-xs-2 col-sm-5">
+					      <button type="button" class="btn btn-success btn-sm" id="btnRegister" >
+						     Join us</button>
+					    </div>
+					  </div>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<div id="main-wrapper">
+			<div id="top" class="row">
+				<div class="alert alert-success col-md-7 col-xs-6 col-sm-3" role="alert" id="hello-user">
+						
+				</div>
+				<div class="col-md-3 col-xs-3 col-sm-1">
+					 <button type="button" class="btn btn-default btn-sm" id="btnLogout" >
+					 	<i class="fa fa-sign-out" aria-hidden="true"></i>
+						     </button>
+				</div>
+			</div>
+			<div class="row">
+				<div id="right" class="col-md-9 col-xs-12 col-sm-12">
+				
+				<div class="panel panel-success">
+				  <div class="panel-heading">
+				    <h3 class="panel-title"><strong>CHAT-IO</strong></h3>
+				  </div>
+				  <div class="panel-body">
+				  	<div id="box">
+				  		<div id="chat-window"></div>
+				  		<div id="typing-msg">
+				  			<img width= '50px' src='/img/giphy.gif'>
+				  		</div>
+				  	</div>
+				  	<form  role="form" id="form-msg">
+						<div class="form-group">
+						    <div class="col-sm-8 col-xs 6">
+						      <input  class="form-control" id="msg" placeholder="Typing here">
+						    </div>
+						</div>
+						  
+						<div class="form-group">
+						    <div class="col-sm-4 col xs-2">
+						      <button type="button" class="btn btn-default btn-sm" id="btnSend" >
+						      <i class="fa fa-location-arrow" aria-hidden="true"></i></button>
+						    </div>
+						</div>
+					</form>
+
+				  </div>
+				 
+				</div>
+			</div>
+			<div id="left" class="col-md-3 col-xs-4 col-sm-0">
+				<div class="panel panel-success">
+				  <div class="panel-heading">
+				    <h3 class="panel-title"><strong>ONLINE</strong></h3>
+				  </div>
+				  <div class="panel-body">
+				  	<div id="online"></div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="/js/xuly.js" ></script>
+</body>
+</html>
